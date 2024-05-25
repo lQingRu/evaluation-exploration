@@ -1,0 +1,48 @@
+{
+  "data_id": 1,
+  "question": "What are the benefits of a healthy diet?",
+  "answer": "A healthy diet helps to maintain a balanced weight, improves heart health, and boosts the immune system. It also contributes to better mental health and can prevent chronic diseases.",
+  "answer_with_citation": "A healthy diet helps to maintain a balanced weight[1], improves heart health[2], and boosts the immune system[3]. It also contributes to better mental health[4] and can prevent chronic diseases[5].",
+  "docs": [
+    {
+      "id": "1",
+      "text": "Maintaining a balanced weight is one of the key benefits of a healthy diet. It involves consuming the right amount of nutrients.",
+      "has_answer": true
+    },
+    {
+      "id": "2",
+      "text": "A diet rich in fruits, vegetables, and whole grains can significantly improve heart health by reducing cholesterol levels.",
+      "has_answer": true
+    },
+    {
+      "id": "3",
+      "text": "Boosting the immune system can be achieved by consuming vitamins and minerals found in a balanced diet.",
+      "has_answer": true
+    },
+    {
+      "id": "4",
+      "text": "Mental health benefits from a healthy diet include improved mood and cognitive function.",
+      "has_answer": true
+    },
+    {
+      "id": "5",
+      "text": "Chronic diseases such as diabetes and hypertension can be prevented with a balanced and nutritious diet.",
+      "has_answer": true
+    },
+    {
+      "id": "6",
+      "text": "Proper hydration is also a component of a healthy diet, which helps in maintaining bodily functions.",
+      "has_answer": false
+    },
+    {
+      "id": "7",
+      "text": "A diet that includes a variety of foods can ensure the body gets a range of essential nutrients.",
+      "has_answer": false
+    },
+    {
+      "id": "8",
+      "text": "Nutrient-dense foods like leafy greens, berries, and nuts can provide significant health benefits.",
+      "has_answer": false
+    }
+  ]
+}

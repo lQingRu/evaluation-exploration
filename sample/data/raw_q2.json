@@ -1,0 +1,48 @@
+{
+  "data_id": 2,
+  "question": "What are the components of a balanced diet?",
+  "answer": "A balanced diet includes a variety of foods that provide essential nutrients such as carbohydrates, proteins, fats, vitamins, and minerals. It should also include adequate water intake.",
+  "answer_with_citation": "A balanced diet includes a variety of foods that provide essential nutrients such as carbohydrates[1], proteins[2], fats[3], vitamins[4], and minerals[5]. It should also include adequate water intake[6].",
+  "docs": [
+    {
+      "id": "1",
+      "text": "Carbohydrates are a major source of energy and should be included in a balanced diet through whole grains, fruits, and vegetables.",
+      "has_answer": true
+    },
+    {
+      "id": "2",
+      "text": "Proteins are essential for growth and repair of tissues and can be obtained from meat, beans, and nuts.",
+      "has_answer": true
+    },
+    {
+      "id": "3",
+      "text": "Fats are necessary for the absorption of certain vitamins and can be found in oils, butter, and avocados.",
+      "has_answer": true
+    },
+    {
+      "id": "4",
+      "text": "Vitamins are vital for numerous bodily functions and can be sourced from fruits, vegetables, and dairy products.",
+      "has_answer": true
+    },
+    {
+      "id": "5",
+      "text": "Minerals such as calcium, iron, and potassium are crucial for various body processes and should be included in a balanced diet.",
+      "has_answer": true
+    },
+    {
+      "id": "6",
+      "text": "Adequate water intake is necessary to maintain hydration and support bodily functions.",
+      "has_answer": true
+    },
+    {
+      "id": "7",
+      "text": "Fiber is an important component of a balanced diet and aids in digestion.",
+      "has_answer": false
+    },
+    {
+      "id": "8",
+      "text": "Phytonutrients, found in plant-based foods, have various health benefits and should be included in a balanced diet.",
+      "has_answer": false
+    }
+  ]
+}

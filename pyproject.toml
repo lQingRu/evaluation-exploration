@@ -1,0 +1,25 @@
+[project]
+name = "evaluation-exploration"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "aip", email = "aip@huat.com"},
+]
+dependencies = [
+    "deepeval>=0.21.36",
+    "python-dotenv>=1.0.1",
+    "rapidfuzz>=3.9.0",
+    "nicegui>=1.4.25",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src/evaluation_exploration"
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "id": 1,
+    "system_prompt": "You are an expert research assistant.",
+    "user_prompt": "Here is the text that you will cite each sentence using the list of context given.\nText: {answer} \nContext: {context}.\nFor each sentence, make reference to the context by adding the context's bracketed number. For example, cite [1] if the sentence generated is extracted from index:1 context and so on."
+  }
+]

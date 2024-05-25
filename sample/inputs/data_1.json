@@ -1,0 +1,48 @@
+{
+  "data_id": 3,
+  "question": "What are the effects of global warming?",
+  "answer": "Global warming leads to rising sea levels, extreme weather events, loss of biodiversity, and impacts on agriculture. It also causes shifts in ecosystems and affects human health.",
+  "answer_with_citation": "Global warming leads to rising sea levels[1], extreme weather events[2], loss of biodiversity[3], and impacts on agriculture[4]. It also causes shifts in ecosystems[5] and affects human health[6].",
+  "docs": [
+    {
+      "id": "1",
+      "text": "Rising sea levels are caused by the melting of polar ice caps and the expansion of seawater as it warms.",
+      "has_answer": true
+    },
+    {
+      "id": "2",
+      "text": "Extreme weather events such as hurricanes, heatwaves, and heavy rainfall are becoming more frequent due to global warming.",
+      "has_answer": true
+    },
+    {
+      "id": "3",
+      "text": "Loss of biodiversity is occurring as species are unable to adapt quickly enough to the changing climate.",
+      "has_answer": true
+    },
+    {
+      "id": "4",
+      "text": "Agriculture is affected by global warming through changes in precipitation patterns and increased temperatures, which can reduce crop yields.",
+      "has_answer": true
+    },
+    {
+      "id": "5",
+      "text": "Shifts in ecosystems are seen as plants and animals migrate to new areas with more favorable conditions.",
+      "has_answer": true
+    },
+    {
+      "id": "6",
+      "text": "Human health is impacted by global warming through increased heat-related illnesses and the spread of vector-borne diseases.",
+      "has_answer": true
+    },
+    {
+      "id": "7",
+      "text": "The economic impact of global warming includes damage to infrastructure and increased costs for disaster response.",
+      "has_answer": false
+    },
+    {
+      "id": "8",
+      "text": "Global warming also has social effects, including displacement of communities and increased migration.",
+      "has_answer": false
+    }
+  ]
+}
