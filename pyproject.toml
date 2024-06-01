@@ -23,3 +23,7 @@ distribution = false
 pythonpath = [
   "src/evaluation_exploration"
 ]
+
+[tool.pdm.scripts]
+start = "python -m ui.app"
+working_dir = "."
