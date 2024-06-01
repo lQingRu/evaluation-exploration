@@ -7,6 +7,8 @@ from typing import List, Dict
 from dotenv import load_dotenv, find_dotenv
 import os
 
+
+load_dotenv(find_dotenv())
 HUGGINGFACEHUB_API_TOKEN = os.environ["HUGGINGFACEHUB_API_TOKEN"]
 HUGGINGFACEHUB_REPO_ID = os.environ["HUGGINGFACEHUB_REPO_ID"]
 

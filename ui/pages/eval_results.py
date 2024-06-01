@@ -24,7 +24,7 @@ def display_configuration(ground_truth_data: RawData):
         ":getRowHeight": "params => Math.ceil(params.data.text.length/100) * 25",
         "rowData": ground_truth_data["docs"]
         },
-    ).classes("max-h-60")
+    ).classes("h-96")
 def display_citation(citation_list: List):
     concatenated_citations = ""
     for citation in citation_list:
@@ -51,7 +51,7 @@ def get_evaluation_dict(evaluation_result: EvaluationResult):
 def display_evaluation_results(evaluation_dict):
     evaluation_grid = ui.aggrid(
     {
-        "defaultColDef": {"flex": 1, "wrapText": True, "resizable": True},
+        "defaultColDef": {"flex": 1,  "autoHeight": True,"wrapText": True, "resizable": True},
         "columnDefs": [
             {
                 "headerName": "Prompt",
@@ -66,10 +66,9 @@ def display_evaluation_results(evaluation_dict):
             {"headerName": "Missed citations", "field": "missing_citations" },
             {"headerName": "Unmatched text in generated answer", "field": "unmatched_text" },
         ],
-        ":getRowHeight": "params => Math.ceil(params.data.prompt.length / 25) * 25",
         "rowData": evaluation_dict
     },html_columns=[3,4,5,6],
-    ).classes("max-h-60")
+    ).classes("h-96")
     return evaluation_grid
 
 
@@ -110,7 +109,7 @@ def eval_without_model():
     def display_evaluation_results(evaluation_dict):
         evaluation_grid = ui.aggrid(
         {
-            "defaultColDef": {"flex": 1, "wrapText": True, "resizable": True},
+            "defaultColDef": {"flex": 1, "autoHeight": True, "wrapText": True, "resizable": True},
             "columnDefs": [
                 {"headerName": "Generated answer", "field": "candidate_answer_with_citation"},
                 {"headerName": "Invalid citations", "field": "wrong_invalid_citations" },
@@ -120,8 +119,8 @@ def eval_without_model():
                 {"headerName": "Missed citations", "field": "missing_citations" },
                 {"headerName": "Unmatched text in generated answer", "field": "unmatched_text" },
             ],
-            ":getRowHeight": "params => Math.ceil((params.data.prompt.candidate_answer_with_citation.length / 25) * 25",
-            "rowData": evaluation_dict
+            "rowData": evaluation_dict,
+            "alwaysShowHorizontalScroll": True
         },html_columns=[2,3,4,5],
         ).classes("max-h-60")
         return evaluation_grid

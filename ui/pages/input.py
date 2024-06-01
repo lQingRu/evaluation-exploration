@@ -41,11 +41,11 @@ def display_data_grid(data_list_dict):
                 },
                 {"headerName": "Docs", "field": "docs", "width": 100},
             ],
-            # ":getRowHeight": "params => params.data.docs.length > 3? 300: 150",
+            ":getRowHeight": "params => params.data.docs.length > 3? 200: 120",
             "rowData": display_truncated_data_docs(data_list_dict),
         },
         html_columns=[3],
-    ).classes("max-h-60")
+    ).classes("h-96")
 
 
 def add_custom_data(e: events.UploadEventArguments, data_list_dict, grid):
@@ -129,7 +129,7 @@ def main():
             "rowData": app.storage.user.get("prompt_data", prompt_data),
             "rowSelection": "multiple",
         },
-    ).classes("max-h-60")
+    ).classes("max-h-72")
 
     custom_prompt_data = []
 
@@ -201,15 +201,15 @@ def custom():
     gt_citations_to_evaluate = []
     container = ui.row()
     with container:
-        with ui.grid(columns=2).classes("w-full items-end"):
+        with ui.grid(columns=2).classes("w-auto items-end"):
             ui.label("Choose a Data ID").classes("text-sm text-indigo-800")
             gt_id = ui.select(
                 options=[data["data_id"] for data in data_list_dict],
             )
             ui.label("Input text to evaluate citation").classes(
-                "text-sm text-indigo-800"
+                "text-sm leading-normal mt-0 mb-2 text-indigo-800"
             )
-            to_eval = ui.textarea().style("width: 80%;")
+            to_eval = ui.textarea().classes("w-96")
 
     def add_gt_eval():
         new = {
@@ -245,7 +245,7 @@ def custom():
             ":getRowHeight": "params => params.data.citation_to_eval.length > 50? 150: 100",
             "rowData": gt_citations_to_evaluate,
         },
-    ).classes("max-h-60")
+    ).classes("h-60")
 
     async def prepare_evaluation():
         app.storage.user["data_to_citation"] = gt_citations_to_evaluate
