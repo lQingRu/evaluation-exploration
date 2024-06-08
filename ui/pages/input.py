@@ -1,6 +1,13 @@
 from nicegui import ui, app, events
 from helper.data_loader import *
 import json
+from helper.state_management import (
+    append_state,
+    get_state,
+    initialize_state,
+    StateKey,
+    reset_states,
+)
 
 
 def display_truncated_data_docs(data_list):
@@ -22,16 +29,20 @@ def display_truncated_data_docs(data_list):
     return truncated_data_docs
 
 
-def display_data_grid(data_list_dict):
+def display_data_grid(data_list_dict, checkbox_selection):
     return ui.aggrid(
         {
-            "defaultColDef": {"flex": 1, "wrapText": True, "resizable": True},
+            "defaultColDef": {
+                "flex": 1,
+                "wrapText": True,
+                "resizable": True,
+            },
             "columnDefs": [
                 {
                     "headerName": "Data ID",
                     "field": "data_id",
                     "width": 8,
-                    "checkboxSelection": True,
+                    "checkboxSelection": checkbox_selection,
                 },
                 {"headerName": "Question", "field": "question", "width": 15},
                 {
@@ -48,10 +59,34 @@ def display_data_grid(data_list_dict):
     ).classes("h-96")
 
 
+def display_prompts_grid(prompts, checkbox_selection):
+    return ui.aggrid(
+        {
+            "defaultColDef": {
+                "flex": 1,
+                "wrapText": True,
+                "resizable": True,
+            },
+            "columnDefs": [
+                {
+                    "headerName": "Prompt ID",
+                    "field": "id",
+                    "width": 8,
+                    "checkboxSelection": checkbox_selection,
+                },
+                {"headerName": "Prompt", "field": "prompt", "width": 200},
+            ],
+            ":getRowHeight": "params => params.data.prompt.length > 50? 150: 100",
+            "rowData": prompts,
+            "rowSelection": "multiple",
+        },
+    ).classes("max-h-72")
+
+
 def add_custom_data(e: events.UploadEventArguments, data_list_dict, grid):
     try:
         data_json = json.loads(e.content.read())
-        app.storage.user["dataset"].append(data_json)
+        append_state(StateKey.DATASET, data_json)
         data_list_dict.append(data_json)
         display_truncated_raw_data = display_truncated_data_docs([data_json])
         grid.options["rowData"] += display_truncated_raw_data
@@ -84,75 +119,62 @@ def display_custom_data_upload(data_list_dict, grid):
     return data_list_dict, grid
 
 
-@ui.page("/")
-def main():
-    # Show different inputs
-    data_list = get_all_sample_data(dir="./sample/data")
-    data_list_dict = [data.model_dump() for data in data_list]
+def add_custom_prompt(value, grid):
+    custom_prompt_id = len(get_state(StateKey.PROMPT_DATA)) + 1
+    prompt = {"id": custom_prompt_id, "prompt": value}
+    append_state(StateKey.PROMPT_DATA, prompt)
+    # grid.options["rowData"].append(prompt)
+    grid.update()
 
-    prompts = get_sample_prompts(path="./sample/prompts/prompts.json")
-    huggingface_models = ["mistralai/mixtral-8x7b-instruct-v0.1"]
-    app.storage.user["dataset"] = data_list_dict
 
-    ui.label("Welcome to LLM custom evaluation platform").style(
-        "color: #6E93D6; font-size: 200%; font-weight: 300"
-    )
-
-    with ui.grid(columns=2):
-
-        ui.label("1. Select a model to evaluate:")
-        model = ui.select(
-            options=huggingface_models,
-        )
-    ui.label("2. Select a prompt to evaluate:")
-    prompt_data = []
-    for id, prompt in prompts.items():
-        prompt_data.append({"id": id, "prompt": prompt.get_concatenated_prompt()})
-
-    prompt_grid = ui.aggrid(
-        {
-            "defaultColDef": {
-                "flex": 1,
-                "wrapText": True,
-                "resizable": True,
-            },
-            "columnDefs": [
-                {
-                    "headerName": "Prompt ID",
-                    "field": "id",
-                    "width": 8,
-                    "checkboxSelection": True,
-                },
-                {"headerName": "Prompt", "field": "prompt", "width": 200},
-            ],
-            ":getRowHeight": "params => params.data.prompt.length > 50? 150: 100",
-            "rowData": app.storage.user.get("prompt_data", prompt_data),
-            "rowSelection": "multiple",
-        },
-    ).classes("max-h-72")
-
-    custom_prompt_data = []
-
-    def add_custom_prompt(value):
-        custom_prompt_id = len(prompt_data) + 1
-        prompt = {"id": custom_prompt_id, "prompt": value}
-        prompt_data.append(prompt)
-        custom_prompt_data.append(prompt)
-        app.storage.user["prompt_data"] = custom_prompt_data
-        prompt_grid.options["rowData"].append(prompt)
-        prompt_grid.update()
-
+def display_custom_prompt_addition(grid):
     with ui.grid(columns=2).classes("w-full items-end"):
         custom_prompt = ui.textarea(label="Custom Prompt").classes(
             "text-sm leading-normal mt-0 mb-2 text-indigo-800"
         )
         ui.button(
-            "Add Prompt", on_click=lambda: add_custom_prompt(custom_prompt.value)
+            "Add Prompt",
+            on_click=lambda: add_custom_prompt(custom_prompt.value, grid),
         ).classes("w-2/6 h-1/6 text-xs")
-    ui.label("3. Select a dataset to evaluate:")
+    return grid
 
-    app.storage.user["prompt_data"] = prompt_data
-    data_grid = display_data_grid(app.storage.user["dataset"])
+
+@ui.page("/")
+def main():
+    ui.label("Welcome to LLM custom evaluation platform").style(
+        "color: #6E93D6; font-size: 200%; font-weight: 300"
+    )
+
+    ui.button(
+        "New Session",
+        on_click=lambda: (reset_states(), ui.navigate.reload()),
+    )
+
+    # Show different inputs
+    data_list = get_all_sample_data(dir="./sample/data")
+    data_list_dict = [data.model_dump() for data in data_list]
+    prompts = get_sample_prompts(path="./sample/prompts/prompts.json")
+    huggingface_models = [
+        "mistralai/mixtral-8x7b-instruct-v0.1",
+        "microsoft/Phi-3-mini-4k-instruct",
+    ]
+    initialize_state(StateKey.DATASET, data_list_dict)
+
+    ui.label("1. Select a model to evaluate:")
+    model = ui.select(
+        options=huggingface_models,
+    )
+
+    ui.label("2. Select a prompt to evaluate:")
+    prompt_data = []
+    for id, prompt in prompts.items():
+        prompt_data.append({"id": id, "prompt": prompt.get_concatenated_prompt()})
+    initialize_state(StateKey.PROMPT_DATA, prompt_data)
+    prompt_grid = display_prompts_grid(get_state(StateKey.PROMPT_DATA), True)
+    prompt_grid = display_custom_prompt_addition(prompt_grid)
+
+    ui.label("3. Select a dataset to evaluate:")
+    data_grid = display_data_grid(get_state(StateKey.DATASET), True)
     data_grid.options["rowSelection"] = "multiple"
     data_list_dict, data_grid = display_custom_data_upload(data_list_dict, data_grid)
 
@@ -160,9 +182,9 @@ def main():
         prompt_rows = await prompt_grid.get_selected_rows()
         data_rows = await data_grid.get_selected_rows()
         if prompt_rows and data_rows:
-            full_data = []
+            full_selected_data = []
             for data in data_rows:
-                full_data.append(data_list_dict[data["data_id"] - 1])
+                full_selected_data.append(data_list_dict[data["data_id"] - 1])
         elif prompt_rows is None and data_rows is None:
             ui.notify("No prompts and No data selected.")
             return
@@ -172,9 +194,9 @@ def main():
         elif data_rows is None:
             ui.notify("No data selected.")
             return
-        app.storage.user["selected_prompts"] = prompt_rows
-        app.storage.user["selected_data"] = full_data
-        app.storage.user["model"] = model.value
+        initialize_state(StateKey.SELECTED_PROMPTS, prompt_rows, False)
+        initialize_state(StateKey.SELECTED_DATA, full_selected_data, False)
+        initialize_state(StateKey.SELECTED_MODEL, model.value, False)
         ui.navigate.to("/eval")
 
     ui.button(
@@ -185,6 +207,10 @@ def main():
 
 @ui.page("/custom")
 def custom():
+    ui.button(
+        "New Session",
+        on_click=lambda: (reset_states(), ui.navigate.reload()),
+    )
     data_list = get_all_sample_data(dir="./sample/data")
     data_list_dict = []
     data_id_dict = dict()
@@ -196,7 +222,7 @@ def custom():
         "color: #6E93D6; font-size: 200%; font-weight: 300"
     )
 
-    data_grid = display_data_grid(data_list_dict)
+    data_grid = display_data_grid(data_list_dict, False)
     data_list_dict, data_grid = display_custom_data_upload(data_list_dict, data_grid)
     gt_citations_to_evaluate = []
     container = ui.row()
@@ -233,22 +259,21 @@ def custom():
                 {
                     "headerName": "Groundtruth",
                     "field": "data.answer_with_citation",
-                    "width": 8,
-                    "checkboxSelection": True,
+                    "width": 100,
                 },
                 {
                     "headerName": "Citation to evaluate",
                     "field": "citation_to_eval",
-                    "width": 200,
+                    "width": 100,
                 },
             ],
-            ":getRowHeight": "params => params.data.citation_to_eval.length > 50? 150: 100",
+            "rowHeight": 200,
             "rowData": gt_citations_to_evaluate,
         },
     ).classes("h-60")
 
     async def prepare_evaluation():
-        app.storage.user["data_to_citation"] = gt_citations_to_evaluate
+        initialize_state(StateKey.CUSTOM_DATA_TO_CITATION, gt_citations_to_evaluate)
         ui.navigate.to("/eval-without-model")
 
     ui.button(

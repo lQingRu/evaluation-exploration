@@ -58,3 +58,70 @@ def test_subset_non_exact_immediate_citations():
     subset_text = "A healthy diet helps to maintain a balanced"
     citations = find_immediate_citations(chunk, subset_text)
     assert citations == ["1"]
+
+
+# Here permutates all possible combinations (but regex itself might be not sufficient)
+# def test_1():
+#     answer_with_citation = "abc [2] def [3]"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert groups[0] == ("abc ", ["2"])
+#     assert groups[1] == (" def ", ["3"])
+#     assert unmatched_texts == ""
+
+
+# def test_2():
+#     answer_with_citation = "abc [2] def"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert groups[0] == ("abc ", ["2"])
+#     assert unmatched_texts == "def"
+
+
+# def test_3():
+#     answer_with_citation = "abc [2,3] def [3]"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert groups[0] == ("abc ", ["2", "3"])
+#     assert groups[1] == (" def ", ["3"])
+#     assert unmatched_texts == ""
+
+
+# def test_4():
+#     answer_with_citation = "abc [2,3,] def [3]"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert groups[0] == ("abc ", ["2", "3"])
+#     assert groups[1] == (" def ", ["3"])
+#     assert unmatched_texts == ""
+
+
+# def test_5():
+#     answer_with_citation = "abc [] def [3]"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert groups[0] == ("abc [] def ", ["3"])
+#     assert unmatched_texts == ""
+
+
+# def test_6():
+#     answer_with_citation = "abc [abc] def [3]"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert groups[0] == ("abc [abc] def ", ["3"])
+#     assert unmatched_texts == ""
+
+
+# def test_7():
+#     answer_with_citation = "abc [abc] def [3a]"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert unmatched_texts == "abc [abc] def [3a]"
+
+
+# def test_8():
+#     answer_with_citation = "abc [1 def [3,]"
+#     groups, unmatched_texts = split_text_with_citations(answer_with_citation)
+#     print(groups)
+#     assert groups[0] == ("abc [1 def ", ["3"])
+#     assert unmatched_texts == ""

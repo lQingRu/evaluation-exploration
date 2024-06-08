@@ -1,47 +1,58 @@
 {
   "data_id": 2,
-  "question": "What are the components of a balanced diet?",
-  "answer": "A balanced diet includes a variety of foods that provide essential nutrients such as carbohydrates, proteins, fats, vitamins, and minerals. It should also include adequate water intake.",
-  "answer_with_citation": "A balanced diet includes a variety of foods that provide essential nutrients such as carbohydrates[1], proteins[2], fats[3], vitamins[4], and minerals[5]. It should also include adequate water intake[6].",
+  "question": "What movies were Harmony Korine both the screenwriter and director?",
+  "answer": "Spring Breakers, Mister Lonely, Gummo.",
+  "answer_with_citation": "Spring Breakers [2], Mister Lonely[1], Gummo. [3]",
   "docs": [
     {
       "id": "1",
-      "text": "Carbohydrates are a major source of energy and should be included in a balanced diet through whole grains, fruits, and vegetables.",
+      "text": "documentary commissioned by Sky Television and Channel 4, it also includes jokes, visual poetry, and music. In addition, Korine has worked with Blaine on a number of Blaine's specials. He first met his wife, Rachel (Simon) Korine, a 17-year-old from Nashville, around this time. His third feature film, \"Mister Lonely\", was co-written by his brother, Avi Korine and starred Diego Luna, Samantha Morton, Denis Lavant, Anita Pallenberg, David Blaine, Werner Herzog and Mal Whiteley. The movie was released in 2008 and debuted at Cannes. His largest film with a budget of $8.2 million, it received mixed reviews and earned $386,915",
       "has_answer": true
     },
     {
       "id": "2",
-      "text": "Proteins are essential for growth and repair of tissues and can be obtained from meat, beans, and nuts.",
+      "text": "Babenco, \"Badlands\" and \"Days of Heaven\" by Terrence Malick, \"Fat City\" by John Huston, \"Stroszek\" by Werner Herzog, \"The Killing of a Chinese Bookie\" and \"A Woman Under the Influence\" by John Cassavetes, \"McCabe and Mrs. Miller\" by Robert Altman, \"Out of the Blue\" by Dennis Hopper and \"Hail Mary\" by Jean-Luc Godard. The opening song on British Progressive rock musician Steven Wilson's solo debut album \"Insurgentes\" is called \"Harmony Korine\". Harmony Korine Harmony Korine (born January 4, 1973) is an American film director and screenwriter. He is best known for writing \"Kids\" and for writing and directing \"Spring Breakers\",",
       "has_answer": true
     },
     {
       "id": "3",
-      "text": "Fats are necessary for the absorption of certain vitamins and can be found in oils, butter, and avocados.",
+      "title": "Harmony Korine",
+      "text": "film features Chlo\u00eb Sevigny and Rosario Dawson in their first movie roles. The film, while controversial, jumpstarted Korine's career. This put him into contact with film producer Cary Woods who budgeted about $1 million to produce \"Gummo\", Korine's personal vision. In 1997, Korine wrote and directed \"Gummo\", a film based on life in Xenia, Ohio, a town devastated by a tornado in the early 1970s. Forgoing conventional narrative, \"Gummo\" embodies sketches written by Korine, hence the nonlinear, fragmented events over the course of the film capitalizing on the obscure. Much of the cast was found during preproduction where it was",
       "has_answer": true
     },
     {
       "id": "4",
-      "text": "Vitamins are vital for numerous bodily functions and can be sourced from fruits, vegetables, and dairy products.",
-      "has_answer": true
+      "text": "Bob Byington Robert Byington (born April 29, 1971) is an American film director, screenwriter and actor living in Austin, Texas. He is most noted for his films \"RSO (Registered Sex Offender)\" (2008), \"Harmony and Me\" (2009), \"Somebody Up There Likes Me\" (2012), winner of The Special Jury Prize at the 2012 Locarno Film Festival, and \"7 Chinese Brothers\" (2015) starring Jason Schwartzman, Olympia Dukakis and Tunde Adebimpe. His most recent film, \"Infinity Baby\" (2017), premiered at South by Southwest in March 2017. Robert \"Bob\" Byington grew up in Lincoln, Nebraska. He studied at the University of California, Santa Cruz and",
+      "has_answer": false
     },
     {
       "id": "5",
-      "text": "Minerals such as calcium, iron, and potassium are crucial for various body processes and should be included in a balanced diet.",
-      "has_answer": true
+      "text": "through his earlier work. Filming began on 5 January 2011 in Semarang; Bramantyo later described the city as a good example of tolerance in action. The film reportedly cost Rp 5 billion ($600,000) to produce. Two songs by the Indonesian band Sheila on 7, \"Pasti Kubisa\" (\"Sure I Can\") and \"Kamus Hidupku\" (\"Dictionary to My Life\") were used in the soundtrack, while Satrio Budiono and Saft Daultsyah handled sound editing. Mulyo Hadi Purnomo, based in Semarang, was tasked with casting the minor roles. Bramantyo contacted the main cast members directly. Agus Kuncoro, who had acted in \"Sang Pencerah\" and was",
+      "has_answer": false
     },
     {
       "id": "6",
-      "text": "Adequate water intake is necessary to maintain hydration and support bodily functions.",
-      "has_answer": true
+      "text": "filmed in Tennessee, and of all those who appeared in the film, only five were experienced actors. The film is notable for having unsettling, often bizarre scenes, as well as its dreamlike soundtrack, which strengthens the disconcerting atmosphere. It features \"an eclectic soundtrack including death metal, Madonna and Roy Orbison. It premiered at the 24th Telluride Film Festival on August 29, 1997. During the screening, numerous people got up and left during the initial cat drowning sequence. Three months later, Werner Herzog called Korine to give praise to the film overall, especially the bacon taped to the wall during the",
+      "has_answer": false
     },
     {
       "id": "7",
-      "text": "Fiber is an important component of a balanced diet and aids in digestion.",
+      "text": "Jamie Babbit Jamie Merill Babbit (born November 16, 1970) is an American film director, producer and screenwriter. She directed the films \"But I'm a Cheerleader\", \"The Quiet\" and \"Itty Bitty Titty Committee\". She has also directed episodes of television programs including \"Gilmore Girls\", \"Malcolm in the Middle\", \"United States of Tara\", \"Looking\", \"Nip/Tuck\", \"The L Word\", and \"Silicon Valley\". Babbit was born in Shaker Heights, Ohio. She grew up in Cleveland with her father, a lawyer and law school professor, and her mother who ran a treatment program for teenagers with drug and alcohol problems, before her death in 2006.",
       "has_answer": false
     },
     {
       "id": "8",
-      "text": "Phytonutrients, found in plant-based foods, have various health benefits and should be included in a balanced diet.",
+      "text": "called \"Proof\": \"richer and deeper, simultaneously both funnier and more serious, than either \"A Beautiful Mind\" or \"Good Will Hunting\".\" Timothy Gowers of the University of Cambridge, a Fields Medalist, and Paul Sally of the University of Chicago, acted as mathematical consultants, although the latter was dismissive of the film's mathematical relevance and accuracy. Proof (2005 film) Proof is a 2005 American drama film directed by John Madden and starring Gwyneth Paltrow, Anthony Hopkins, Jake Gyllenhaal, and Hope Davis. It was written by Rebecca Miller, based on David Auburn's Pulitzer Prize-winning play \"Proof\". The plot alternates between events immediately following",
+      "has_answer": false
+    },
+    {
+      "id": "9",
+      "text": "Amy Goldstein Amy Goldstein is an American director, producer and screenwriter of music videos, television series (HBO, Fox, CBS, Showtime, MTV), and feature films. Her work has been presented at film festivals worldwide. Amy Goldstein graduated a Louis B. Mayer fellow from NYU film school. Goldstein has directed music videos for artists worldwide, including Rod Stewart\u2019s \"Downtown Train\" Her lesbian vampire musical, \"Because The Dawn\", premiered at the Toronto Film Festival in 1988. With Scott Kraft she co-wrote and directed the feature film, \"The Silencer\", for Crown. In 2000, Goldstein directed the award-winning feature film \"East of A\" about an",
+      "has_answer": false
+    },
+    {
+      "id": "10",
+      "text": "in its first 9 months. The film is the story of \"a young American man lost in Paris. He scratches out a living as a Michael Jackson look-alike, dancing in the streets, in public parks, at tourist spots and trade shows. Different from everyone else, he feels as if he's floating between two worlds. During a show at a geriatric home Michael Jackson meets Marilyn Monroe. Haunted by her angelic beauty he follows her to a commune in the Highlands, joining her husband Charlie Chaplin and her daughter Shirley Temple. The commune is a place where everyone is famous and",
       "has_answer": false
     }
   ]

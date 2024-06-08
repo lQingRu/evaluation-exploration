@@ -3,5 +3,15 @@
     "id": 1,
     "system_prompt": "You are an expert research assistant.",
     "user_prompt": "Here is the text that you will cite each sentence using the list of context given.\nText: {answer} \nContext: {context}.\nFor each sentence, make reference to the context by adding the context's bracketed number. For example, cite [1] if the sentence generated is extracted from index:1 context and so on."
+  },
+  {
+    "id": 2,
+    "system_prompt": "You are expert in providing in-text citations from a given text and a list of possible references.",
+    "user_prompt": "I want you to provide in-text citations to each of the sentences in the text under the heading, \"Text\". You should only use the documents under the heading \"Documents\" to cite.\nI want you to use the Document Id with square brackets for in-text citations. For example, if sentence \"John is happy.\" is referencing document Id: 2, you should cite [2] so the sentence returned should be \"John is happy. [2]\".\nYou should only use the document to cite if it has the same meaning as the sentence you are citing. \nYou should only add citations and not change any words from the given \"Text\".\n# Text\n{answer}\n# Documents\n{context}"
+  },
+  {
+    "id": 3,
+    "system_prompt": "You are an expert assistant in referencing semantically same wordings.",
+    "user_prompt": "Here is the text that you will reference at least 1 document from the list of context for each sentence if the document has the same meaning as the sentence.\nText:\n{answer}\n\nContext:\n{context}\nWhen you make reference for each sentence in \"Text\", use the format of square brackets with the context ID. For example, cite [1] if the sentence is referencing context Id: 1, cite [2] if the sentence is referencing context Id: 2 and so on.\nYou do not need to use all the documents in the context, but you should reference each sentence in the \"Text\" with the given context.\nYou should only add citations and not change any words from the given \"Text\"."
   }
 ]

@@ -26,7 +26,7 @@ def generate_citations(answer: str, context: List[Dict], prompt: str, model: str
     return response
 
 
-def full_evaluation(data: RawData, prompt: str, model: str):
+async def full_evaluation(data: RawData, prompt: str, model: str):
     contexts = [{"id": d.id, "text": d.text} for d in data.docs]
     generated_answer_with_citations = generate_citations(
         data.answer, contexts, prompt, model

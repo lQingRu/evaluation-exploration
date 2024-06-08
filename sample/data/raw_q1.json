@@ -1,47 +1,57 @@
 {
   "data_id": 1,
-  "question": "What are the benefits of a healthy diet?",
-  "answer": "A healthy diet helps to maintain a balanced weight, improves heart health, and boosts the immune system. It also contributes to better mental health and can prevent chronic diseases.",
-  "answer_with_citation": "A healthy diet helps to maintain a balanced weight[1], improves heart health[2], and boosts the immune system[3]. It also contributes to better mental health[4] and can prevent chronic diseases[5].",
+  "answer": "The Indian cricket team are two times World Champions.In addition to winning the 1983 Cricket World Cup, they triumphed over Sri Lanka in the 2011 Cricket World Cup on home soil. ",
+  "answer_with_citation": "The Indian cricket team are two times World Champions.In addition to winning the 1983 Cricket World Cup, they triumphed over Sri Lanka in the 2011 Cricket World Cup on home soil. [1]",
+  "question": "When did india win the cricket world cup?",
   "docs": [
     {
       "id": "1",
-      "text": "Maintaining a balanced weight is one of the key benefits of a healthy diet. It involves consuming the right amount of nutrients.",
+      "text": "India at the Cricket World Cup The Indian cricket team are two times World Champions. In addition to winning the 1983 Cricket World Cup, they triumphed over Sri Lanka in the 2011 Cricket World Cup on home soil. They were also runners-up at the 2003 Cricket World Cup, and semifinalists thrice (1987, 1996 and 2015). They came last in the Super Six stage in the 1999 Cricket World Cup and have been knocked out 4 times in the Group stage (1975, 1979, 1992 and 2007). India's historical win-loss record at the cricket world cup is 46-27, with 1 match being",
       "has_answer": true
     },
     {
       "id": "2",
-      "text": "A diet rich in fruits, vegetables, and whole grains can significantly improve heart health by reducing cholesterol levels.",
-      "has_answer": true
+      "text": "and Sandeep Patil (51 not out from 32 balls, 8 fours) made half-centuries, with Amarnath (46 from 92 balls, 4 fours, 1 six) too contributing, as India reached their target comfortably, winning by 6 wickets in a classic victory over the hosts. Amarnath picked up the Man of the Match award for his all-round performance. This win brought India to the World Cup final for the very first time, which was to be played against the West Indies on 25 June 1983 at Lord's in London. A third consecutive tournament victory for the West Indies was widely predicted by most",
+      "has_answer": false
     },
     {
       "id": "3",
-      "text": "Boosting the immune system can be achieved by consuming vitamins and minerals found in a balanced diet.",
-      "has_answer": true
+      "text": "tournament. The Indian team was somewhat stronger than the team representing them in the 1999 World Cup, but still contained the batting trio of Sachin Tendulkar, Rahul Dravid and Sourav Ganguly and the pace-spin duo of Javagal Srinath and Anil Kumble, now accompanied by rising talents Yuvraj Singh, Zaheer Khan, Harbhajan Singh, Mohammed Kaif and Virender Sehwag. In the Group stage, India were placed in Group A, accompanied by co-hosts Zimbabwe, defending champions Australia, arch-rivals Pakistan, England and minnows Holland and Namibia, who were playing their first World Cup. India had a horrid beginning to the tournament. Their first match",
+      "has_answer": false
     },
     {
       "id": "4",
-      "text": "Mental health benefits from a healthy diet include improved mood and cognitive function.",
-      "has_answer": true
+      "text": "wicket-takers. The quarter finals saw co-hosts India and Pakistan meet in Bangalore. After Pakistani captain Wasim Akram withdrew due to injury, Ajay Jadeja struck 40 from the last two overs from Waqar Younis, setting Pakistan a target of 288. Pakistan were going well at 109/1, but after Aamer Sohail confronted taunted Indian bowler Venkatesh Prasad after striking a boundary, Prasad bowled him immediately after, sparking a collapse of 3/19, all to Prasad. After falling 39 runs short, the Government of Pakistan launched an inquiry into the performance, after angry protests by the public which left one person dead, and accusations",
+      "has_answer": false
     },
     {
       "id": "5",
-      "text": "Chronic diseases such as diabetes and hypertension can be prevented with a balanced and nutritious diet.",
-      "has_answer": true
+      "text": "1979. Other countries which have achieved or equalled their best World Cup results while co-hosting the tournament are New Zealand as finalists in 2015; Zimbabwe who reached the Super Six in 2003; and Kenya as semi-finalists in 2003. In 1987, co-hosts India and Pakistan both reached the semi-finals, but were eliminated by Australia and England respectively. Australia in 1992, England in 1999, South Africa in 2003, and Bangladesh in 2011 have been the host teams that were eliminated in the first round. An overview of the teams' performances in every World Cup: Before the 1992 World Cup, South Africa was",
+      "has_answer": false
     },
     {
       "id": "6",
-      "text": "Proper hydration is also a component of a healthy diet, which helps in maintaining bodily functions.",
+      "text": "achieved 11 consecutive World Cup match victories starting from 2011 during the tournament, which is just below the Cup record of 25 wins in a row, held by Australia. Barring the semifinal, the Indian team bowled out the opposition in every match, a remarkable feat for a bowling attack traditionally considered to be weaker than the batting. With 412 runs from 8 matches including 2 centuries, opener Dhawan was the fifth highest run scorer of the tournament, while the fast bowlers Yadav and Shami bagged the third and fourth spots respectively among the tournament's leading bowlers with 18 and 17",
       "has_answer": false
     },
     {
       "id": "7",
-      "text": "A diet that includes a variety of foods can ensure the body gets a range of essential nutrients.",
+      "text": "has improved its overseas form, especially in limited-overs cricket, since the start of the 21st century, winning Test matches in Australia, England and South Africa. It has won the Cricket World Cup twice \u2013 in 1983 under the captaincy of Kapil Dev and in 2011 under the captaincy of Mahendra Singh Dhoni. After winning the 2011 World Cup, India became only the third team after West Indies and Australia to have won the World Cup more than once, and the first cricket team to win the World Cup at home. It also won the 2007 ICC World Twenty20 and 2013",
       "has_answer": false
     },
     {
       "id": "8",
-      "text": "Nutrient-dense foods like leafy greens, berries, and nuts can provide significant health benefits.",
+      "text": "non-Test playing nation is the semi-final appearance by Kenya in the 2003 tournament; while the best result by a non-Test playing team on their debut is the Super 8 (second round) by Ireland in 2007. Sri Lanka as a co-host of the 1996 Cricket World Cup was the first host to win the tournament though the final was held in Pakistan. India won in 2011 as host and was the first team to win in a final played in their own country. Australia repeated the feat in 2015. England is the only other host to have made the final, in",
+      "has_answer": false
+    },
+    {
+      "id": "9",
+      "text": "event. India volunteered to host the third Cricket World Cup, but most ICC members preferred England as the longer period of daylight in England in June meant that a match could be completed in one day. The 1987 Cricket World Cup was held in India and Pakistan, the first hosted outside England. Many of the tournaments have been jointly hosted by nations from the same geographical region, such as South Asia in 1987, 1996 and 2011, Australasia in 1992 and 2015, Southern Africa in 2003 and West Indies in 2007. Twenty nations have qualified for the Cricket World Cup at",
+      "has_answer": false
+    },
+    {
+      "id": "10",
+      "text": "beaten by Australia. In September 2007, India won the first ever Twenty20 World Cup held in South Africa, beating Pakistan by 5 runs in a thrilling final. India won the Cricket World Cup in 2011 under the captainship of Mahendra Singh Dhoni, the first time since 1983 \u2013 they beat Sri Lanka in the final held in Mumbai. India played its 500th Test match against New Zealand at Kanpur from 22 September 2016. India won this match by 197 runs. This test was played under the captaincy of Virat Kohli. International cricket in India generally does not follow a fixed",
       "has_answer": false
     }
   ]
