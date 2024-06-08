@@ -1,0 +1,26 @@
+[project]
+name = "evaluation-exploration"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "aip", email = "aip@huat.com"},
+]
+dependencies = [
+    "huggingface-hub>=0.23.2",
+    "pydantic>=2.7.2",
+    "langchain-core>=0.2.3",
+    "langchain>=0.2.1",
+    "langchain-community>=0.2.1",
+    "python-dotenv>=1.0.1",
+    "deepeval>=0.21.48",
+    "transformers>=4.41.2",
+    "pytorch>=1.0.2",
+    "torch==2.1.1",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
