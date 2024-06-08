@@ -1,5 +1,5 @@
 from nicegui import ui, app
-from eval import full_evaluation, content_evaluation
+from evaluation.eval import full_evaluation, content_evaluation
 from typing import List, Dict
 from schema.evaluation import EvaluationResult
 from schema.data import RawData

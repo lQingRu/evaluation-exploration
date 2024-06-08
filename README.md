@@ -4,11 +4,16 @@ This is meant to be POC for an evaluation platform, with the main purposes to ea
 
 - Tuning prompts
 - Evaluating LLMs
-- Possible post-/pre- processing of data before generating citations
+- Possible post-/pre- processing of data before generation with citations
 
 This will be a very raw implementation to simply see the methodology and if it is useful to even have such a platform.
 
 - To date, nicegui only supports the groundtruth evaluation, unsupervised evaluation is WIP in `unsupervised` directory
+
+## Dependencies
+
+- `pdm install` in root directory for nicegui
+- `pdm install` in `unsupervised` directory for unsupervised evaluation
 
 ## To start nicegui
 
